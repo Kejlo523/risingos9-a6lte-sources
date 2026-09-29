@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!--
+    RisingOS Revived 9 / Android 17 overrides for Samsung Galaxy A6 (2018).
+    Every project declared in this file is pinned to an exact commit.
+  -->
+  <remote name="a6-kejlo" fetch="https://github.com/Kejlo523/" />
+  <remote name="a6-github" fetch="https://github.com/" />
+  <remote name="a6-aosp" fetch="https://android.googlesource.com/" />
+
+  <!-- Replace RisingOS projects modified for the legacy Exynos 7870 BSP. -->
+  <remove-project name="platform/build/blueprint" optional="true" />
+  <remove-project name="android_build" optional="true" />
+  <remove-project name="android_build_soong" optional="true" />
+  <remove-project name="android_bionic" optional="true" />
+  <remove-project name="android_frameworks_base-new" optional="true" />
+  <remove-project name="android_hardware_interfaces" optional="true" />
+  <remove-project name="android_system_core" optional="true" />
+  <remove-project name="LineageOS/android_system_extras" optional="true" />
+  <remove-project name="system_vold" optional="true" />
+  <remove-project name="android_packages_apps_Settings" optional="true" />
+  <remove-project name="android_packages_apps_Updater" optional="true" />
+  <remove-project name="android_packages_modules_Bluetooth" optional="true" />
+  <remove-project name="packages_modules_Connectivity" optional="true" />
+  <remove-project name="android_packages_modules_Wifi" optional="true" />
+  <remove-project name="LineageOS/android_packages_modules_Nfc" optional="true" />
+  <remove-project name="platform/packages/modules/DnsResolver" optional="true" />
+  <remove-project name="LineageOS/android_system_netd" optional="true" />
+  <remove-project name="android_vendor_addons" optional="true" />
+  <remove-project name="android_vendor_rising" optional="true" />
+  <remove-project name="android_vendor_gms" optional="true" />
+  <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_arm64" optional="true" />
+
+  <project name="android_build_blueprint" path="build/blueprint" remote="a6-kejlo"
+           revision="1cac916937cf8057e2294f02862f5ab68064b233" />
+  <project name="android_build" path="build/make" remote="a6-kejlo"
+           revision="58d0c17eeede38b278568b6b6f1910a2a5b8284c" />
+  <project name="android_build_soong" path="build/soong" remote="a6-kejlo"
+           revision="72914f8c720118b35381f5a34dae26b21c26b534" />
+  <project name="android_bionic" path="bionic" remote="a6-kejlo"
+           revision="1b9e8903023e2f7a2b120cc1785a796e28da6eea" />
+  <project name="android_frameworks_base" path="frameworks/base" remote="a6-kejlo"
+           revision="9b4659bfd6f8bd02d9cdaa318e066ad7cc3b1fb4" />
+  <project name="android_hardware_interfaces" path="hardware/interfaces" remote="a6-kejlo"
+           revision="151405e9151fcd74be16482847e2061f6a053441" />
+  <project name="android_system_core" path="system/core" remote="a6-kejlo"
+           revision="ef5c5b3bd36004d653785fa5ca7943920c8c6466" />
+  <project name="android_system_extras" path="system/extras" remote="a6-kejlo"
+           revision="7ce0d0e200443e39f46a402899dcc8520e0fe18d" />
+  <project name="system_vold" path="system/vold" remote="a6-kejlo"
+           revision="fcaf93645f503939c84e04d54b41ff9ab37c717d" />
+
+  <project name="android_packages_apps_Settings" path="packages/apps/Settings" remote="a6-kejlo"
+           revision="72003fbe768e2b2de46e8f95bca78d364183b261" />
+  <project name="android_packages_apps_Updater" path="packages/apps/Updater" remote="a6-kejlo"
+           revision="687d1888f574b225eb3d2eed242006f26112de28" />
+  <project name="android_packages_modules_Bluetooth" path="packages/modules/Bluetooth" remote="a6-kejlo"
+           revision="2b3254e52e0232cd0c6d14cdc2add4288f815925" />
+  <project name="packages_modules_Connectivity" path="packages/modules/Connectivity" remote="a6-kejlo"
+           revision="2284bb0561b75a9427ee7e966fddc0006c73a878" />
+  <project name="android_packages_modules_Wifi" path="packages/modules/Wifi" remote="a6-kejlo"
+           revision="349cdbf90e887ed9dfdde061838a10f1216adb72" />
+  <project name="android_packages_modules_Nfc" path="packages/modules/Nfc" remote="a6-kejlo"
+           revision="18dd600665b2587a527441b807c800629cb17a12" />
+  <project name="android_packages_modules_DnsResolver" path="packages/modules/DnsResolver" remote="a6-kejlo"
+           revision="70b3dc9f6e2e097934db361cb1fb9beb5aa76d1d" />
+  <project name="android_system_netd" path="system/netd" remote="a6-kejlo"
+           revision="45d61a687ca36d232a4644db673074d8ae30c64d" />
+
+  <project name="android_vendor_addons" path="vendor/addons" remote="a6-kejlo"
+           revision="4e7bfe3cab4871ca1fede6c1f73d7a5ebe499751" />
+  <project name="android_vendor_rising" path="vendor/rising" remote="a6-kejlo"
+           revision="0762faa96b37c809818026b31668c79f42b5bba5" />
+  <project name="vendor_gms-a6lte" path="vendor/gms" remote="a6-kejlo"
+           revision="1e3da6a80ffa55eab2d2fbd2a34d12a17a0cbc89" />
+  <project name="android_external_chromium-webview_prebuilt_arm64-a6lte"
+           path="external/chromium-webview/prebuilt/arm64" remote="a6-kejlo"
+           revision="6839dda14aa44d148258b11cb155eda23892a36c" />
+
+  <!-- Device, common BSP, proprietary blobs and GPL kernel source. -->
+  <project name="android_device_samsung_a6lte" path="device/samsung/a6lte" remote="a6-kejlo"
+           revision="2bb4c5e5f6a2718d4af9d60210ae51863501d38b" />
+  <project name="android_device_samsung_universal7870-common"
+           path="device/samsung/universal7870-common" remote="a6-kejlo"
+           revision="7d1b88afff4929200d885b37742e304e6feb9579" />
+  <project name="android_vendor_samsung_a6lte" path="vendor/samsung/a6lte" remote="a6-kejlo"
+           revision="7ce58f42af6037125e59132ebf3e5b5272aa99c6" />
+  <project name="android_vendor_samsung_universal7870-common"
+           path="vendor/samsung/universal7870-common" remote="a6-kejlo"
+           revision="b894707235f8d8dcad55503732a2a99acc364a57" />
+  <project name="android_kernel_samsung_exynos7870" path="kernel/samsung/exynos7870"
+           remote="a6-kejlo" revision="6f656b4f0d94269ca50a16b31a23d08d1e89c150" />
+
+  <!-- Samsung/Exynos hardware layers changed by the port. -->
+  <project name="android_hardware_samsung" path="hardware/samsung" remote="a6-kejlo"
+           revision="5f8712b191951debaee97cb4328cb40767bff574" />
+  <project name="android_hardware_samsung_slsi-linaro_config"
+           path="hardware/samsung_slsi-linaro/config" remote="a6-kejlo"
+           revision="5fac71813860e6ffaf9160c454e08de2fed7bb5a" />
+  <project name="android_hardware_samsung_slsi-linaro_exynos"
+           path="hardware/samsung_slsi-linaro/exynos" remote="a6-kejlo"
+           revision="b9b71351c1192314f35429fc6d191fa662961523" />
+  <project name="android_hardware_samsung_slsi-linaro_exynos7870"
+           path="hardware/samsung_slsi-linaro/exynos7870" remote="a6-kejlo"
+           revision="bd167ebc366d007d7573cafc00a2b2ebf9ea8511" />
+  <project name="android_hardware_samsung_slsi-linaro_graphics"
+           path="hardware/samsung_slsi-linaro/graphics" remote="a6-kejlo"
+           revision="560e681a070562aa2221d15ed65cf065499ca38b" />
+  <project name="android_hardware_samsung_slsi-linaro_openmax"
+           path="hardware/samsung_slsi-linaro/openmax" remote="a6-kejlo"
+           revision="8f056743d58a749cb190f656cf116d95145d9f22" />
+
+  <!-- Exact upstream dependencies required by the Exynos 7870 trees. -->
+  <project name="platform/prebuilts/vndk/v29" path="prebuilts/vndk/v29" remote="a6-aosp"
+           revision="2e659f04a7cde964415c82dd7507610769165408" />
+  <project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9"
+           path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" remote="a6-github"
+           revision="be79a1c2ee1ff7a110b653a682c236979539acd2" />
+  <project name="samsungexynos7870/android_hardware_samsung_slsi-linaro_config"
+           path="hardware/samsung_slsi-linaro/config7870" remote="a6-github"
+           revision="4b44295b7b09165b985122396964719ce0196328" />
+  <project name="LineageOS/android_device_samsung_slsi_sepolicy"
+           path="device/samsung_slsi/sepolicy" remote="a6-github"
+           revision="ac6a195ccc08d2fbcd3580924f25e4b289ae7025" />
+  <project name="LineageOS/android_hardware_samsung_slsi-linaro_exynos5"
+           path="hardware/samsung_slsi-linaro/exynos5" remote="a6-github"
+           revision="8150e5bfdf46fc59a2b212215064820712adc933" />
+  <project name="LineageOS/android_hardware_samsung_slsi-linaro_interfaces"
+           path="hardware/samsung_slsi-linaro/interfaces" remote="a6-github"
+           revision="a23ed82b3f3859aa9e0207036b0d0e98119b959b" />
+  <project name="LineageOS/android_hardware_samsung_slsi_nfc"
+           path="hardware/samsung_slsi/nfc" remote="a6-github"
+           revision="88490b4408246e6c10ef1a6942844796f66dee5e" />
+</manifest>
